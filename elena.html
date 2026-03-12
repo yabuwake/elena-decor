@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <link rel="stylesheet" href="elena.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elena Decor - Premium Event Decoration in Ethiopia. Luxury weddings, birthdays, corporate events &amp; unforgettable celebrations.">
+    <title>Elena Decor • Luxury Event Decoration</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    
+</head>
+<body class="tail-container bg-zinc-950 text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-[#d4af77] to-amber-300 rounded-full flex items-center justify-center text-black font-bold text-2xl">E</div>
+                <div>
+                    <span class="heading-font text-3xl tracking-tighter font-semibold gold-text">Elena</span>
+                    <span class="heading-font text-3xl tracking-tighter font-light">Decor</span>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-x-10 text-sm font-medium">
+                <a href="#hero" class="nav-link text-white/90 hover:text-[#d4af77]">Home</a>
+                <a href="#about" class="nav-link text-white/90 hover:text-[#d4af77]">About</a>
+                <a href="#portfolio" class="nav-link text-white/90 hover:text-[#d4af77]">Portfolio</a>
+                <a href="#services" class="nav-link text-white/90 hover:text-[#d4af77]">Services</a>
+                <a href="#testimonials" class="nav-link text-white/90 hover:text-[#d4af77]">Stories</a>
+                <a href="#contact" class="nav-link text-white/90 hover:text-[#d4af77]">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-x-4">
+                <a href="https://wa.me/251911234567" target="_blank"
+                   class="flex items-center gap-x-2 bg-[#d4af77] hover:bg-amber-300 transition-colors text-black px-6 py-3 rounded-2xl font-semibold text-sm">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <button onclick="toggleMobileMenu()" 
+                        class="md:hidden w-11 h-11 flex items-center justify-center text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-zinc-900 border-t border-white/10 py-6">
+            <div class="flex flex-col px-6 gap-y-6 text-lg">
+                <a href="#hero" onclick="toggleMobileMenu()" class="nav-link">Home</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="nav-link">About</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" class="nav-link">Portfolio</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="nav-link">Services</a>
+                <a href="#testimonials" onclick="toggleMobileMenu()" class="nav-link">Stories</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Slideshow -->
+        <div id="hero-slides" class="absolute inset-0">
+            <!-- Slides populated by JS -->
+        </div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+            <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl text-sm mb-8 border border-white/20">
+                <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                Addis Ababa • Ethiopia
+            </div>
+            
+            <h1 class="heading-font text-6xl md:text-7xl lg:text-8xl font-light tracking-tighter leading-none mb-6">
+                Turning Your Events<br>Into <span class="gold-text">Unforgettable</span> Moments
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-white/80 max-w-lg mx-auto mb-12">
+                Luxury event decoration for weddings, birthdays, corporate galas &amp; dream celebrations
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" 
+                        class="group relative px-12 py-6 bg-white text-black font-semibold text-lg rounded-3xl overflow-hidden transition-all hover:scale-105">
+                    <span class="relative z-10 flex items-center gap-x-3">
+                        Book Your Event
+                        <i class="fas fa-arrow-right group-active:rotate-45 transition"></i>
+                    </span>
+                </button>
+                
+                <button onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-12 py-6 border border-white/70 hover:border-white text-white font-medium text-lg rounded-3xl transition-all">
+                    Explore Our Work
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-y-2 text-white/60 text-xs tracking-widest">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+            SCROLL TO DISCOVER
+        </div>
+
+        <!-- Floating badges -->
+        <div class="hidden xl:block absolute bottom-20 left-12 bg-black/70 backdrop-blur-xl px-6 py-4 rounded-3xl border border-white/10 text-sm">
+            <div class="flex items-center gap-x-4">
+                <i class="fas fa-star text-[#d4af77]"></i>
+                <div>
+                    <div class="font-semibold">4.98</div>
+                    <div class="text-xs text-white/60">from 187 clients</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hidden xl:block absolute bottom-20 right-12 bg-black/70 backdrop-blur-xl px-6 py-4 rounded-3xl border border-white/10 text-sm">
+            <div class="flex items-center gap-x-3">
+                <i class="fas fa-heart text-pink-300"></i>
+                <span class="font-medium">Featured in Vogue Ethiopia 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-28 bg-white text-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-5">
+                <div class="sticky top-28">
+                    <div class="inline-flex items-center gap-x-2 text-sm font-medium tracking-widest bg-zinc-100 px-5 py-3 rounded-3xl">
+                        <span class="text-[#d4af77]">EST. 2019</span>
+                    </div>
+                    <h2 class="heading-font text-6xl font-light tracking-tighter leading-none mt-6 mb-8">
+                        We don’t just decorate.<br>We create memories.
+                    </h2>
+                    <p class="text-lg text-zinc-600 max-w-md">
+                        Elena Decor was founded with a passion for transforming ordinary spaces into extraordinary experiences. 
+                        Every petal, every light, every detail is chosen with love and precision.
+                    </p>
+                    
+                    <div class="mt-12 flex items-center gap-x-8">
+                        <div>
+                            <div class="text-5xl font-light text-[#d4af77]">35</div>
+                            <div class="text-sm uppercase tracking-widest text-zinc-500">Events Delivered</div>
+                        </div>
+                        <div class="h-12 w-px bg-zinc-300"></div>
+                        <div>
+                            <div class="text-5xl font-light text-[#d4af77]">2</div>
+                            <div class="text-sm uppercase tracking-widest text-zinc-500">Cities Across Ethiopia</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:col-span-7">
+                <div class="aspect-video bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="./photo/11.jpg" 
+                         alt="Elena Decor Story" 
+                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                </div>
+                
+                <div class="mt-8 grid grid-cols-3 gap-6 text-center">
+                    <div class="bg-white border border-zinc-100 rounded-3xl p-8 card-hover">
+                        <div class="text-4xl mb-3">🌸</div>
+                        <div class="font-semibold text-lg">Floral Artistry</div>
+                    </div>
+                    <div class="bg-white border border-zinc-100 rounded-3xl p-8 card-hover">
+                        <div class="text-4xl mb-3">✨</div>
+                        <div class="font-semibold text-lg">Lighting Magic</div>
+                    </div>
+                    <div class="bg-white border border-zinc-100 rounded-3xl p-8 card-hover">
+                        <div class="text-4xl mb-3">🏛️</div>
+                        <div class="font-semibold text-lg">Bespoke Design</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO / GALLERY -->
+    <section id="portfolio" class="py-28 bg-zinc-950">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <div class="uppercase tracking-[3px] text-sm font-medium text-[#d4af77]">Our Creations</div>
+                    <h2 class="heading-font text-6xl font-light tracking-tighter">Portfolio</h2>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-3 mt-8 md:mt-0" id="category-filters">
+                    <button onclick="filterGallery('all')" 
+                            class="active-filter px-8 py-3 rounded-3xl border border-white/30 hover:border-[#d4af77] transition-all text-sm font-medium">All</button>
+                    <button onclick="filterGallery('wedding')" 
+                            class="px-8 py-3 rounded-3xl border border-white/30 hover:border-[#d4af77] transition-all text-sm font-medium">Wedding</button>
+                    <button onclick="filterGallery('birthday')" 
+                            class="px-8 py-3 rounded-3xl border border-white/30 hover:border-[#d4af77] transition-all text-sm font-medium">Birthday</button>
+                    <button onclick="filterGallery('corporate')" 
+                            class="px-8 py-3 rounded-3xl border border-white/30 hover:border-[#d4af77] transition-all text-sm font-medium">Corporate</button>
+                    <button onclick="filterGallery('special')" 
+                            class="px-8 py-3 rounded-3xl border border-white/30 hover:border-[#d4af77] transition-all text-sm font-medium">Special</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" 
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Upload Admin Section -->
+            <div class="mt-24 border border-white/10 bg-zinc-900/70 backdrop-blur-xl rounded-3xl p-10 max-w-2xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center gap-x-2 bg-[#d4af77]/10 text-[#d4af77] text-xs font-medium tracking-widest px-6 py-2 rounded-3xl">
+                        <i class="fas fa-lock"></i>
+                        ADMIN • 
+                    </div>
+                    <h3 class="heading-font text-4xl mt-4">Upload New Work</h3>
+                </div>
+                
+                <form id="upload-form" class="space-y-8">
+                    <div>
+                        <label class="block text-sm mb-2 text-white/70">Event Photo</label>
+                        <input type="file" id="photo-upload" accept="image/*" 
+                               class="w-full bg-zinc-800 border border-white/20 rounded-2xl px-6 py-6 text-sm file:mr-6 file:py-3 file:px-8 file:rounded-2xl file:border-0 file:bg-[#d4af77] file:text-black file:font-medium">
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm mb-2 text-white/70">Event Name</label>
+                            <input id="event-name" type="text" placeholder="E.g. Sarah &amp; Daniel Wedding" 
+                                   class="w-full bg-zinc-800 border border-white/20 rounded-2xl px-6 py-6 focus:outline-none focus:border-[#d4af77]">
+                        </div>
+                        <div>
+                            <label class="block text-sm mb-2 text-white/70">Category</label>
+                            <select id="event-category" 
+                                    class="w-full bg-zinc-800 border border-white/20 rounded-2xl px-6 py-6 focus:outline-none focus:border-[#d4af77]">
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="corporate">Corporate</option>
+                                <option value="special">Special Event</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm mb-2 text-white/70">Short Description</label>
+                        <textarea id="event-desc" rows="3" placeholder="Luxury floral arch with crystal chandeliers..."
+                                  class="w-full bg-zinc-800 border border-white/20 rounded-2xl px-6 py-6 focus:outline-none focus:border-[#d4af77]"></textarea>
+                    </div>
+                    
+                    <button type="button" onclick="uploadNewWork()" 
+                            class="w-full py-7 bg-gradient-to-r from-[#d4af77] to-amber-300 text-black font-semibold rounded-3xl text-lg hover:tracking-wider transition-all">
+                        PUBLISH TO GALLERY
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden parallax" 
+             style="background-image: url('https://picsum.photos/id/201/2000/1200');">
+        <div class="absolute inset-0 bg-black/70"></div>
+        
+        <div class="relative z-10 max-w-2xl mx-auto text-center px-6">
+            <div class="mx-auto w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-2xl flex items-center justify-center mb-8 border border-white/30">
+                <i onclick="playVideo()" class="fas fa-play text-3xl text-white cursor-pointer"></i>
+            </div>
+            <h2 class="heading-font text-5xl md:text-6xl font-light tracking-tighter mb-6">Watch the Magic Happen</h2>
+            <p class="text-white/70 text-xl">Behind-the-scenes look at our most breathtaking setup</p>
+        </div>
+        
+        <!-- Video Modal -->
+        <div id="video-modal" onclick="if(event.target.id==='video-modal') closeVideo()" 
+             class="hidden fixed inset-0 bg-black/95 z-[999] flex items-center justify-center">
+            <div class="max-w-4xl w-full px-6">
+                <div class="relative">
+                    <button onclick="closeVideo()" 
+                            class="absolute -top-6 -right-6 text-white text-4xl hover:text-[#d4af77]">×</button>
+                    <iframe id="youtube-player" width="100%" height="560" 
+                            src="https://www.youtube.com/embed/p-JRaq51xu0?si=aVvFm3CjX1XbvHUO&amp;start=60" 
+                            title="Elena Decor Highlight Reel" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen class="rounded-3xl shadow-2xl"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LATEST WORKS SLIDER -->
+    <section class="py-28 bg-white text-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex items-baseline justify-between mb-12">
+                <h2 class="heading-font text-6xl font-light tracking-tighter">Latest Works</h2>
+                <div class="flex gap-x-4">
+                    <button onclick="prevSlide()" 
+                            class="w-12 h-12 rounded-2xl border flex items-center justify-center hover:border-[#d4af77] transition-all">
+                        ←
+                    </button>
+                    <button onclick="nextSlide()" 
+                            class="w-12 h-12 rounded-2xl border flex items-center justify-center hover:border-[#d4af77] transition-all">
+                        →
+                    </button>
+                </div>
+            </div>
+            
+            <div id="latest-slider" class="flex gap-8 overflow-hidden">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-28 bg-zinc-950">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#d4af77] text-sm font-medium tracking-widest">WHAT WE OFFER</span>
+                <h2 class="heading-font text-6xl font-light tracking-tighter mt-3">Signature Services</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Wedding -->
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover group">
+                    <div class="h-72 bg-cover bg-center rounded-3xl mb-8"
+                         style="background-image: url('./photo/22.jpg')"></div>
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="text-3xl font-light">Wedding</h3>
+                            <p class="text-white/60">Dream ceremonies &amp; receptions</p>
+                        </div>
+                        <span class="text-5xl text-[#d4af77]/30 group-hover:text-[#d4af77]/70 transition">01</span>
+                    </div>
+                </div>
+                
+                <!-- Birthday -->
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover group">
+                    <div class="h-72 bg-cover bg-center rounded-3xl mb-8"
+                         style="background-image: url('./photo/20.jpg')"></div>
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="text-3xl font-light">Birthday</h3>
+                            <p class="text-white/60">Magical celebrations for all ages</p>
+                        </div>
+                        <span class="text-5xl text-[#d4af77]/30 group-hover:text-[#d4af77]/70 transition">02</span>
+                    </div>
+                </div>
+                
+                <!-- Corporate -->
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover group">
+                    <div class="h-72 bg-cover bg-center rounded-3xl mb-8"
+                         style="background-image: url('./photo/2.jpg')"></div>
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="text-3xl font-light">Corporate</h3>
+                            <p class="text-white/60">Elegant business events</p>
+                        </div>
+                        <span class="text-5xl text-[#d4af77]/30 group-hover:text-[#d4af77]/70 transition">03</span>
+                    </div>
+                </div>
+                
+                <!-- Special -->
+                <div class="bg-zinc-900 rounded-3xl p-8 card-hover group">
+                    <div class="h-72 bg-cover bg-center rounded-3xl mb-8"
+                         style="background-image: url('./photo/18.jpg')"></div>
+                    <div class="flex justify-between items-baseline">
+                        <div>
+                            <h3 class="text-3xl font-light">Engagement &amp; Special</h3>
+                            <p class="text-white/60">Intimate &amp; bespoke moments</p>
+                        </div>
+                        <span class="text-5xl text-[#d4af77]/30 group-hover:text-[#d4af77]/70 transition">04</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-28 bg-white text-zinc-900">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-6xl font-light tracking-tighter">Love from Our Clients</h2>
+            </div>
+            
+            <div id="testimonial-slider" class="max-w-3xl mx-auto relative">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-28 bg-zinc-950">
+        <div class="max-w-screen-2xl mx-auto px-6 grid md:grid-cols-2 gap-20">
+            <!-- Form -->
+            <div>
+                <h2 class="heading-font text-6xl font-light tracking-tighter mb-10">Let’s Create Magic Together</h2>
+                
+                <form id="contact-form" onsubmit="handleContact(event)" class="space-y-8">
+                    <div class="grid grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" required
+                               class="bg-zinc-900 border border-white/20 rounded-3xl px-8 py-7 focus:outline-none focus:border-[#d4af77]">
+                        <input type="email" placeholder="Email Address" required
+                               class="bg-zinc-900 border border-white/20 rounded-3xl px-8 py-7 focus:outline-none focus:border-[#d4af77]">
+                    </div>
+                    
+                    <input type="text" placeholder="Event Type &amp; Date" required
+                           class="w-full bg-zinc-900 border border-white/20 rounded-3xl px-8 py-7 focus:outline-none focus:border-[#d4af77]">
+                    
+                    <textarea placeholder="Tell us about your vision..." rows="6" required
+                              class="w-full bg-zinc-900 border border-white/20 rounded-3xl px-8 py-7 focus:outline-none focus:border-[#d4af77]"></textarea>
+                    
+                    <button type="submit"
+                            class="w-full py-7 bg-white text-black font-semibold rounded-3xl text-xl hover:bg-[#d4af77] transition-all">
+                        SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Info -->
+            <div class="space-y-16">
+                <div>
+                    <div class="text-sm uppercase tracking-widest text-white/50 mb-4">REACH US</div>
+                    <a href="tel:+25199422097" class="block text-4xl hover:text-[#d4af77] transition">+251 99 422 097</a>
+                    <a href="tel:+251944656696" class="block text-4xl hover:text-[#d4af77] transition">+251 944 656 696 </a>
+                </div>
+                
+                <div>
+                    <div class="text-sm uppercase tracking-widest text-white/50 mb-4">WHATSAPP</div>
+                    <a href="https://wa.me/251911234567" target="_blank"
+                       class="inline-flex items-center gap-x-4 text-4xl hover:text-[#d4af77] transition">
+                        <i class="fab fa-whatsapp text-5xl"></i>
+                        <span>Chat instantly</span>
+                    </a>
+                </div>
+                
+                <!-- Map -->
+                <div class="rounded-3xl overflow-hidden border border-white/10">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.523!2d38.763!3d9.005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8b9f!2sAddis+Ababa!5e0!3m2!1sen!2set!4v1700000000000" 
+                            width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                
+                <div class="text-sm text-white/60">
+                    ኣያት, Addis Ababa, Ethiopia<br>
+                    Open Monday – Saturday 9am – 6pm
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 border-t border-white/10">
+        <div class="max-w-screen-2xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between gap-y-12">
+                <div>
+                    <div class="flex items-center gap-x-3 mb-8">
+                        <div class="w-8 h-8 bg-gradient-to-br from-[#d4af77] to-amber-300 rounded-2xl flex items-center justify-center text-black text-3xl">E</div>
+                        <span class="heading-font text-4xl tracking-tighter font-light">Elena Decor</span>
+                    </div>
+                    <p class="text-white/60 max-w-xs">Crafting timeless elegance for your most cherished celebrations since 2023.</p>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-x-16">
+                    <div>
+                        <div class="font-medium text-sm mb-6 text-white/70">NAVIGATION</div>
+                        <div class="space-y-4 text-sm">
+                            <a href="#about" class="block hover:text-[#d4af77]">About</a>
+                            <a href="#portfolio" class="block hover:text-[#d4af77]">Portfolio</a>
+                            <a href="#services" class="block hover:text-[#d4af77]">Services</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium text-sm mb-6 text-white/70">CONNECT</div>
+                        <div class="space-y-4 text-sm">
+                            <a href="https://www.instagram.com/http.helaa?igsh=dnZmeW5wZ2w1dXVi" class="block hover:text-[#d4af77]">Instagram</a>
+                            <a href="https://t.me/elenaa_decor" class="block hover:text-[#d4af77]">Telegram</a>
+                         
+                        </div>
+                    </div>
+                    <div>
+                        <div class="font-medium text-sm mb-6 text-white/70">LEGAL</div>
+                        <div class="space-y-4 text-sm">
+                            <a href="#" class="block hover:text-[#d4af77]">Privacy</a>
+                            <a href="#" class="block hover:text-[#d4af77]">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-white/50">
+                <div>© 2026 Elena Decor. All rights reserved.</div>
+                <div class="mt-4 md:mt-0">Crafted with passion in Addis Ababa</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" onclick="if(event.target.id==='lightbox') closeLightbox()" 
+         class="hidden fixed inset-0 bg-black/95 z-[9999] flex items-center justify-center">
+        <button onclick="closeLightbox()" 
+                class="absolute top-8 right-8 text-6xl text-white hover:text-[#d4af77]">×</button>
+        <img id="lightbox-image" 
+             class="max-h-[90vh] max-w-[95vw] rounded-3xl shadow-2xl lightbox" 
+             alt="">
+        <div id="lightbox-caption" class="absolute bottom-12 left-1/2 -translate-x-1/2 bg-black/70 px-8 py-3 rounded-3xl text-sm"></div>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/251911234567" target="_blank"
+       class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] hover:scale-110 transition-all rounded-3xl shadow-2xl flex items-center justify-center text-4xl">
+        <i class="fab fa-whatsapp text-white"></i>
+    </a>
+<script src="./elena.js"></script>
+</body>
+</html>
